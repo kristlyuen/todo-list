@@ -1,4 +1,4 @@
-:root {
+/* :root {
   --shadow-color: 5deg 37% 71%;
   --shadow-elevation-low:
     0px -0.3px 0.2px hsl(var(--shadow-color) / 0.38),
@@ -15,10 +15,10 @@
     0px 4px 6px hsl(var(--shadow-color) / 0.25),
     0px 8px 12px hsl(var(--shadow-color) / 0.15),
     0px 16px 24px hsl(var(--shadow-color) / 0.1);
-}
+} */
 body {
   padding: 4px;
-  background: #ffd9d6;
+  background: #89d5d2;
 }
 html, body, #root {
   height: 100%;
@@ -62,7 +62,7 @@ html, body, #root {
   border-radius: 8px;
 }
 .new-list-item-form form {
-  border: 2px dashed hsl(4deg 75% 65%);
+  /* border: 2px dashed hsl(4deg 75% 65%); */
   border-radius: 4px;
   padding: 16px;
   text-align: center;
