@@ -22,15 +22,11 @@ function AddNewItemForm({ handleNewItem }) {
         // Run the generateList function when the form is submitted. 
         onSubmit={generateList}
       >
-       
-        <label htmlFor="new-list-form-input">
-          New item:
-        </label>
-        
         <div className="row">
           <input
             id="new-list-form-input"
             type="text"
+            placeholder="Task"
             // Assign the value to the listItem.
             value={listItem}
             // When the input is changed, set the listItem to what's entered.
@@ -38,7 +34,7 @@ function AddNewItemForm({ handleNewItem }) {
           setListItem(event.target.value);
           }}
           />
-          <button>
+          <button className="btn">
             Add
           </button>
         </div>

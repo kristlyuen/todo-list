@@ -12,7 +12,7 @@ function App() {
     // Create a new item and assign it a randomly generated ID.
     const newItem = {
       listItem,
-      id: Crypto.randomUUID(),
+      id: Math.random(),
     }
 
     // Spread the existing list and adding the new list item to create a new array.
@@ -22,22 +22,40 @@ function App() {
     setList(newItemList)
   }
 
+  function handleDelete(id) {
+    const removeItem = list.filter((todo) => {
+      return todo.id !== id
+    })
+    setList(removeItem)
+  }
+
   return (
     
     <div className="wrapper">
-      <div className="list-wrapper">
-        <ol className="shopping-list">
-          {/* Map through the list items, use the assigned ID as the key.*/}
-          {list.map((listItem, id) => ( 
-            <li key={id}>{listItem}</li>
-          ))}
-        </ol>
-      </div>
       
-      {/*    // Render the AddNewItemForm component and pass down the handleNewItem function.*/}
+      {/* Add a heading for the to do list. */}
+      <h1>To do list</h1>
+
+      {/* Render the AddNewItemForm component and pass down the handleNewItem function.*/}
       <AddNewItemForm 
         handleNewItem={handleNewItem}
       />
+
+      <div className="list-wrapper">
+        <ol className="todo-list">
+          {/* Map through the list items, use the assigned ID as the key.*/}
+          {list.map(({ listItem, id }) => ( 
+            <li key={id}>
+              {listItem}
+              <button 
+                className="delete-item" 
+                onClick={() => handleDelete(listItem.id)}>
+                🗑️
+              </button>
+            </li>
+          ))}
+        </ol>
+      </div>
     </div>
   );
 }

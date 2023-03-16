@@ -1,3 +1,10 @@
-# Todo list app
+# To do list app
 
-Basic todo list using React. This started as part of a React course and I've updated the CSS and am planning on adding delete functionality. 
+To do list using React, JavaScript, and vanilla CSS. 
+
+This started as a shopping list exercise in a React course. I've changed it to a to do list and have updated the styling. 
+
+Plans:
+- Add delete functionality
+- Add strikethrough when task is finished
+- Add undo
